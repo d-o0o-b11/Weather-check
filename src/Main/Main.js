@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <Container>
       <Background color="green" background="pink">
-        바뀌는지 체크
+        바뀌는지 체크22222
       </Background>
     </Container>
   );
