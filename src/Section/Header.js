@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <div className="header-container">
         <h1>circle Weather</h1>
-        <Clock mobile="false" />
+        <Clock mobile="true" />
       </div>
     </>
   );

@@ -4,14 +4,14 @@ import Location from "../img/Location.png";
 import "./Clock.css";
 
 const Clock = ({ mobile }) => {
-  const [timer, setTimer] = useState("00:00:00");
+  const [timer, setTimer] = useState("00:00");
 
   const currentTimer = () => {
     const date = new Date();
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
     const seconds = String(date.getSeconds()).padStart(2, "0");
-    setTimer(`${hours}:${minutes}:${seconds}`);
+    setTimer(`${hours}:${minutes}`);
   };
 
   const startTimer = () => {
@@ -20,9 +20,7 @@ const Clock = ({ mobile }) => {
 
   startTimer();
 
-  return { mobile } ? (
-    <h3>모바일 {mobile}</h3>
-  ) : (
+  return (
     <StyledClock>
       <div className="clock-container">
         <h1>{timer}</h1>
