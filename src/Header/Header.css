@@ -1,0 +1,15 @@
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 30px;
+  grid-row-gap: 65px;
+  place-items: unset;
+  /* height: 500px; */
+  padding-bottom: 50px;
+}
+
+.header-container h1 {
+  font-size: 65px;
+  margin: 10px;
+}

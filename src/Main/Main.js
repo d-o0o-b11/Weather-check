@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Background from "../Background/Background";
 import Container from "../Background/Container";
+import Header from "../Header/Header";
 
 const Main = () => {
   //if 낮이면 #d4dde2
@@ -9,8 +10,8 @@ const Main = () => {
 
   return (
     <Container>
-      <Background color="green" background="pink">
-        바뀌는지 체크22222
+      <Background>
+        <Header />
       </Background>
     </Container>
   );

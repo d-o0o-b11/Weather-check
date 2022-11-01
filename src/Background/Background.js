@@ -1,12 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Background = ({ children, color, background }) => {
-  return (
-    <StyledBackGround color={color} background={background} Î>
-      {children}
-    </StyledBackGround>
-  );
+const Background = ({ children }) => {
+  return <StyledBackGround>{children}</StyledBackGround>;
 };
 
 const StyledBackGround = styled.div`
@@ -17,10 +13,10 @@ const StyledBackGround = styled.div`
   heigth: 97vh;
   min-height: 95vh;
   margin: 0 auto;
-  color: ${(props) => props.color || "gray"};
-  background: ${(props) => props.background || "white"};
+  // color: ${(props) => props.color || "gray"};
+  // background: ${(props) => props.background || "white"};
   background: linear-gradient(#81beff, #a0d0ff, #bfe2fe);
-  box-shadow: 3px 3px 10px #abb6be;
+  box-shadow: 0px 4px 4px #abb6be;
 `;
 
 export default Background;

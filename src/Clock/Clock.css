@@ -1,0 +1,22 @@
+.clock-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 7px;
+  /* grid-row-gap: 65px; */
+  /* padding-top: 50px; */
+  place-items: end;
+  /* height: 500px; */
+  padding-bottom: 30px;
+}
+
+.clock-container h1 {
+  font-size: 96px;
+  margin: 10px;
+}
+
+.clock-container span {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 20px;
+}
