@@ -10,9 +10,10 @@ const StyledBackGround = styled.div`
   font-size: 1rem;
   border: 1px solid lightgray;
   width: 97%;
-  heigth: 97vh;
+  heigth: 95vh;
   min-height: 95vh;
   margin: 0 auto;
+  margin: 10px 0;
   // color: ${(props) => props.color || "gray"};
   // background: ${(props) => props.background || "white"};
   background: linear-gradient(#81beff, #a0d0ff, #bfe2fe);

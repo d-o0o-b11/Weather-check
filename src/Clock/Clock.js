@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Location from "../img/Location.png";
 import "./Clock.css";
 
-const Clock = ({ mobile }) => {
+const Clock = () => {
   const [timer, setTimer] = useState("00:00");
 
   const currentTimer = () => {
@@ -20,12 +20,17 @@ const Clock = ({ mobile }) => {
 
   startTimer();
 
+  // useEffect(() => {
+  //   localStorage.setItem("time", timer);
+  //   console.log("변함");
+  // }, [timer]);
+
   return (
     <StyledClock>
       <div className="clock-container">
-        <h1>{timer}</h1>
-        <div>
-          <img src={Location} width="50px" />
+        <h1 className="item2">{timer}</h1>
+        <div className="location">
+          <img src={Location} />
           <span>Busan</span>
         </div>
       </div>

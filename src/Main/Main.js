@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Background from "../Background/Background";
 import Container from "../Background/Container";
 import Header from "../Section/Header";
-import DetailContainer from "../DetailContainer/DetailContainer";
-import DetailButton from "../DetailButton/DetailButton";
 import Body from "../Section/Body";
 
 const Main = () => {
