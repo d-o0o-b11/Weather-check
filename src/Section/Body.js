@@ -11,22 +11,30 @@ const Body = () => {
           <DetailContainer width="95%" height="95vh" />
         </div>
         <div className="button-container">
-          <DetailButton width="40%" height="40vh">
+          {/* 모바일 사이즈
+          <DetailButton width="125px" height="10vh"> 
+            <h1>Korea</h1>
+            <h4>이미지</h4>
+            <span>24ºC</span>
+          </DetailButton> */}
+
+          {/* 컴퓨터 사이즈 */}
+          <DetailButton width="210px" height="20vh">
             <h1>Korea</h1>
             <h4>이미지</h4>
             <span>24ºC</span>
           </DetailButton>
-          <DetailButton width="40%" height="40vh">
+          <DetailButton width="210px" height="20vh">
             <h1>Korea</h1>
             <h4>이미지</h4>
             <span>24ºC</span>
           </DetailButton>
-          <DetailButton width="40%" height="40vh">
+          <DetailButton width="210px" height="20vh">
             <h1>Korea</h1>
             <h4>이미지</h4>
             <span>24ºC</span>
           </DetailButton>
-          <DetailButton width="40%" height="40vh">
+          <DetailButton width="210px" height="20vh">
             <h1>Korea</h1>
             <h4>이미지</h4>
             <span>24ºC</span>

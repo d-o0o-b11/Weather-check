@@ -14,11 +14,12 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 10%;
-  grid-row-gap: 65px;
+  grid-row-gap: 30px;
   place-items: unset;
   /* height: 500px; */
   padding-bottom: 50px;
   margin-top: 100px;
+  margin-right: 6%;
 }
 
 /* phone */

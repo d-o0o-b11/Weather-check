@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = ({ width, heigth, children }) => {
+const Container = ({ width, heigth, background, children }) => {
   return (
-    <StyledContainer width={width} heigth={heigth}>
+    <StyledContainer width={width} heigth={heigth} background={background}>
       {children}
     </StyledContainer>
   );
 };
 
 const StyledContainer = styled.div`
-  background-color: #d4dde2;
+  background-color: ${(props) => props.background || "#d4dde2"};
   margin: 0 auto;
   display: flex; //중앙 배치
   justify-content: center; //중앙 배치
