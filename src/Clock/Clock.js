@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Location from "../img/Location.png";
+import LocationW from "../img/LocationW.png";
 import "./Clock.css";
 
-const Clock = () => {
+const Clock = ({ color }) => {
   const [timer, setTimer] = useState("00:00");
 
   const currentTimer = () => {
@@ -20,17 +21,12 @@ const Clock = () => {
 
   startTimer();
 
-  // useEffect(() => {
-  //   localStorage.setItem("time", timer);
-  //   console.log("변함");
-  // }, [timer]);
-
   return (
-    <StyledClock>
+    <StyledClock color={color}>
       <div className="clock-container">
         <h1 className="item2">{timer}</h1>
         <div className="location">
-          <img src={Location} />
+          {color === "white" ? <img src={LocationW} /> : <img src={Location} />}
           <span>Busan</span>
         </div>
       </div>
@@ -40,6 +36,7 @@ const Clock = () => {
 
 const StyledClock = styled.div`
   margin-right: 50px;
+  color: ${(props) => props.color || "black"};
 `;
 
 export default Clock;

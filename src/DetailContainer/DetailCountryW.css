@@ -1,0 +1,13 @@
+.detailCountry-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 7px;
+  /* grid-row-gap: 65px; */
+  /* padding-top: 50px; */
+  place-items: center;
+  /* height: 500px; */
+}
+hr {
+  border: 1px solid #bebebe;
+}

@@ -2,13 +2,16 @@ import React from "react";
 import "./Body.css";
 import DetailContainer from "../DetailContainer/DetailContainer";
 import DetailButton from "../DetailButton/DetailButton";
+import DetailCountryW from "../DetailContainer/DetailCountryW";
 
 const Body = () => {
   return (
     <>
       <div className="body-container">
         <div className="item" style={{ width: "100%", height: "100%" }}>
-          <DetailContainer width="95%" height="95vh" />
+          <DetailContainer width="95%" height="80vh">
+            <DetailCountryW />
+          </DetailContainer>
         </div>
         <div className="button-container">
           {/* 모바일 사이즈

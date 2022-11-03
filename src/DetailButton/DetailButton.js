@@ -20,6 +20,11 @@ const StyledButton = styled.button`
   background: rgba(255, 255, 255, 0.58);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
+
+  &:hover {
+    border: 2px solid #0d99ff;
+    cursor: pointer;
+  }
 `;
 
 export default DetailButton;

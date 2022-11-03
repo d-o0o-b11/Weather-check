@@ -4,7 +4,7 @@
   grid-template-rows: auto;
   grid-gap: 100px;
   grid-row-gap: 65px;
-  place-items: baseline;
+  place-items: center;
   padding-bottom: 50px;
   margin: 0 90px 0 90px;
 }
