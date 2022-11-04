@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Background = ({ background, children }) => {
-  console.log("확인:" + background);
   return (
     <StyledBackGround background={background}>{children}</StyledBackGround>
   );
