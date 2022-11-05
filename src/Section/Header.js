@@ -10,11 +10,9 @@ const { kakao } = window;
 
 //1초마다 코드실행하고 싶으면 setInterval 쓰면 됩니다
 const Header = ({ color }) => {
-  const { location: currentLocation, error: currentError } =
-    useCurrentLocation(geolocationOptions);
+  // const { location: currentLocation, error: currentError } =
+  //   useCurrentLocation(geolocationOptions);
   const [Current_address, SetCurrent_address] = useState("");
-
-  console.log("currentLocation: " + currentLocation);
 
   useEffect(() => {
     //   const getAddr = (lat, lng) => {
@@ -33,6 +31,8 @@ const Header = ({ color }) => {
     //   // console.log(latitude, longitude);
     //   getAddr(latitude, longitude);
     // });
+    useCurrentLocation(geolocationOptions);
+
     console.log("useEffect는 들어옴");
     const getAddr = (lat, lng) => {
       let geocoder = new kakao.maps.services.Geocoder();
