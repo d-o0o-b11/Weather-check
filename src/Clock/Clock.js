@@ -4,7 +4,7 @@ import Location from "../img/Location.png";
 import LocationW from "../img/LocationW.png";
 import "./Clock.css";
 
-const Clock = ({ color }) => {
+const Clock = ({ color, location }) => {
   const [timer, setTimer] = useState("00:00");
 
   const currentTimer = () => {
@@ -27,7 +27,7 @@ const Clock = ({ color }) => {
         <h1 className="item2">{timer}</h1>
         <div className="location">
           {color === "white" ? <img src={LocationW} /> : <img src={Location} />}
-          <span>Busan</span>
+          <span>{location}</span>
         </div>
       </div>
     </StyledClock>

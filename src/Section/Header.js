@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Clock from "../Clock/Clock";
 import LOGO from "../img/logo.png";
@@ -12,17 +12,8 @@ const { kakao } = window;
 const Header = ({ color }) => {
   // const { location: currentLocation, error: currentError } =
   //   useCurrentLocation(geolocationOptions);
+  const [Current_address, SetCurrent_address] = useState("");
 
-  // useEffect(() => {
-  //   const container = document.getElementById("map");
-  //   const options = {
-  //     center: new kakao.maps.LatLng(33.450701, 126.570667),
-  //     level: 3,
-  //   };
-  //   const map = new kakao.maps.Map(container, options);
-  // }, []);
-
-  // 여기
   useEffect(() => {
     //   const getAddr = (lat, lng) => {
     //     let geocoder = new kakao.maps.services.Geocoder();
@@ -46,7 +37,11 @@ const Header = ({ color }) => {
       let coord = new kakao.maps.LatLng(lat, lng);
       let callback = (result, status) => {
         if (status === kakao.maps.services.Status.OK) {
-          console.log(result);
+          //console.log(result);
+          SetCurrent_address(
+            result[0].address.region_1depth_name +
+              result[0].address.region_2depth_name
+          );
         }
       };
       geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
@@ -111,7 +106,7 @@ const Header = ({ color }) => {
     <>
       <div className="header-container">
         <img src={LOGO} />
-        <Clock color={color} />
+        <Clock color={color} location={Current_address} />
         {/* <div id="myMap" style={{ width: "500px", height: "500px" }}></div> */}
       </div>
     </>

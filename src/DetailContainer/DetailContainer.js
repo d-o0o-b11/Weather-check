@@ -18,7 +18,6 @@ const StyledDetail = styled.div`
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
   border-radius: 14px;
-  padding: 5px 30px;
 `;
 
 export default DetailContainer;
