@@ -57,6 +57,7 @@ const Header = ({ color }) => {
     // console.log(latitude, longitude);
     getAddr(latitude, longitude);
   });
+  console.log("latitude: " + latitude + "  longitude: " + longitude);
 
   // setTimeout(() => {
   //   const getAddr = (lat, lng) => {
