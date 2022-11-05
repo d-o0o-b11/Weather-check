@@ -31,11 +31,12 @@ const Header = ({ color }) => {
     //   // console.log(latitude, longitude);
     //   getAddr(latitude, longitude);
     // });
-
+    console.log("useEffect는 들어옴");
     const getAddr = (lat, lng) => {
       let geocoder = new kakao.maps.services.Geocoder();
       let coord = new kakao.maps.LatLng(lat, lng);
       let callback = (result, status) => {
+        console.log(status);
         if (status === kakao.maps.services.Status.OK) {
           console.log(result);
           SetCurrent_address(
