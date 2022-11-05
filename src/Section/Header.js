@@ -55,9 +55,9 @@ const Header = ({ color }) => {
     let latitude = localStorage.getItem("latitude");
     let longitude = localStorage.getItem("longitude");
     // console.log(latitude, longitude);
+    console.log("latitude: " + latitude + "  longitude: " + longitude);
     getAddr(latitude, longitude);
   });
-  console.log("latitude: " + latitude + "  longitude: " + longitude);
 
   // setTimeout(() => {
   //   const getAddr = (lat, lng) => {
