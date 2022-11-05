@@ -36,7 +36,7 @@ const Header = ({ color }) => {
       let geocoder = new kakao.maps.services.Geocoder();
       let coord = new kakao.maps.LatLng(lat, lng);
       let callback = (result, status) => {
-        console.log(status);
+        console.log(kakao.maps.services.Status.OK);
         if (status === kakao.maps.services.Status.OK) {
           console.log(result);
           SetCurrent_address(
