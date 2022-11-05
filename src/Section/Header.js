@@ -15,49 +15,33 @@ const Header = ({ color }) => {
   const [Current_address, SetCurrent_address] = useState("");
 
   useEffect(() => {
-    //   const getAddr = (lat, lng) => {
-    //     let geocoder = new kakao.maps.services.Geocoder();
-    //     console.log("실행");
-    //     let coord = new kakao.maps.LatLng(lat, lng);
-    //     let callback = (result, status) => {
-    //       if (status === kakao.maps.services.Status.OK) {
-    //         console.log(result);
-    //       }
-    //     };
-    //     geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
-    //   };
-    //   let latitude = localStorage.getItem("latitude");
-    //   let longitude = localStorage.getItem("longitude");
-    //   // console.log(latitude, longitude);
-    //   getAddr(latitude, longitude);
-    // });
-    useCurrentLocation(geolocationOptions);
-
     console.log("useEffect는 들어옴");
-    const getAddr = (lat, lng) => {
-      let geocoder = new kakao.maps.services.Geocoder();
-      let coord = new kakao.maps.LatLng(lat, lng);
-      let callback = (result, status) => {
-        console.log("status " + status);
-        console.log(
-          "kakao.maps.services.Status.OK " + kakao.maps.services.Status.OK
-        );
-
-        if (status === kakao.maps.services.Status.OK) {
-          console.log(status === kakao.maps.services.Status.OK);
-          console.log(result);
-          SetCurrent_address(
-            result[0].address.region_1depth_name +
-              result[0].address.region_2depth_name
+    script.onload = () => {
+      const getAddr = (lat, lng) => {
+        let geocoder = new kakao.maps.services.Geocoder();
+        let coord = new kakao.maps.LatLng(lat, lng);
+        let callback = (result, status) => {
+          console.log("status " + status);
+          console.log(
+            "kakao.maps.services.Status.OK " + kakao.maps.services.Status.OK
           );
-        }
+
+          if (status === kakao.maps.services.Status.OK) {
+            console.log(status === kakao.maps.services.Status.OK);
+            console.log(result);
+            SetCurrent_address(
+              result[0].address.region_1depth_name +
+                result[0].address.region_2depth_name
+            );
+          }
+        };
+        geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
       };
-      geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
+      let latitude = localStorage.getItem("latitude");
+      let longitude = localStorage.getItem("longitude");
+      // console.log(latitude, longitude);
+      console.log("latitude: " + latitude + "  longitude: " + longitude);
     };
-    let latitude = localStorage.getItem("latitude");
-    let longitude = localStorage.getItem("longitude");
-    // console.log(latitude, longitude);
-    console.log("latitude: " + latitude + "  longitude: " + longitude);
     getAddr(latitude, longitude);
   });
 
